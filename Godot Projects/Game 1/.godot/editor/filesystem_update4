@@ -1,2 +1,4 @@
+res://Player/Player.tscn
 res://main.tscn
-res://main.gd
+res://world.tscn
+res://Player/Player.gd
