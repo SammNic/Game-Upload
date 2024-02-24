@@ -1,0 +1,60 @@
+name: "godot-ci export"
+on: push
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+env:
+  GODOT_VERSION: 4.3
+  RELEASE_NAME: dev2
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  export-web:
+    name: Web Export
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Download Godot
+        run: |
+          wget https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/${RELEASE_NAME}/Godot_v${GODOT_VERSION}-${RELEASE_NAME}_linux.x86_64.zip
+          wget https://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/${RELEASE_NAME}/Godot_v${GODOT_VERSION}-${RELEASE_NAME}_export_templates.tpz
+          unzip Godot_v${GODOT_VERSION}-${RELEASE_NAME}_linux.x86_64.zip
+          mv Godot_v${GODOT_VERSION}-${RELEASE_NAME}_linux.x86_64.zip godot
+          unzip Godot_v${GODOT_VERSION}-${RELEASE_NAME}_export_templates.tpz
+          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.${RELEASE_NAME}
+          mv templates/* ~/.local/share/godot/export_templates/${GODOT_VERSION}.${RELEASE_NAME}
+      - name: Web Build
+        run: |
+          mkdir -v -p build/web
+          rm ./godot
+          mv ./Godot_v${GODOT_VERSION}-${RELEASE_NAME}_linux.x86_64 ./godot
+          chmod +x ./godot
+          ./godot --headless -v --export-release "HTML5" ./build/web/index.html
+          cd ./build/web
+          curl -fsSL https://github.com/gzuidhof/coi-serviceworker/raw/master/coi-serviceworker.js > coi-serviceworker.js
+          sed -i 's#\(        <script src="index.js"></script>\)#        <script src="coi-serviceworker.js"></script>\n\1#g' index.html
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: web
+          path: build/web
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: 'build/web'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
