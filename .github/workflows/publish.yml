@@ -39,7 +39,8 @@ jobs:
           rm ./godot
           mv ./Godot_v${GODOT_VERSION}-${RELEASE_NAME}_linux.x86_64 ./godot
           chmod +x ./godot
-          ./godot --headless -v --export-release "HTML5" ./build/web/index.html
+          cd "Game 1"
+          ../godot --headless -v --export-release "HTML5" ./build/web/index.html
           cd ./build/web
           curl -fsSL https://github.com/gzuidhof/coi-serviceworker/raw/master/coi-serviceworker.js > coi-serviceworker.js
           sed -i 's#\(        <script src="index.js"></script>\)#        <script src="coi-serviceworker.js"></script>\n\1#g' index.html
@@ -47,14 +48,14 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: web
-          path: build/web
+          path: "Game 1/build/web"
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: 'build/web'
+          path: "Game 1/build/web"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
