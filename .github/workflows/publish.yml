@@ -43,7 +43,7 @@ jobs:
           ../godot --headless -v --export-release "HTML5" ./build/web/index.html
           cd ./build/web
           curl -fsSL https://github.com/gzuidhof/coi-serviceworker/raw/master/coi-serviceworker.js > coi-serviceworker.js
-          sed -i 's#\(        <script src="index.js"></script>\)#        <script src="coi-serviceworker.js"></script>\n\1#g' index.html
+          sed -i 's#\(<script src="index.js"></script>\)#<script src="coi-serviceworker.js"></script>\n\1#g' index.html
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
