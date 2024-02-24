@@ -1,0 +1,379 @@
+[gd_scene load_steps=34 format=3 uid="uid://bot00map6tnje"]
+
+[ext_resource type="Texture2D" uid="uid://ccsr4nydlkelp" path="res://PlayerSprites/Level1ForestWIP.png" id="1_32sk0"]
+[ext_resource type="PackedScene" uid="uid://bles2w3tdrjqp" path="res://Player/Player.tscn" id="1_88frn"]
+[ext_resource type="Texture2D" uid="uid://cwxxbu2n3v260" path="res://PlayerSprites/Level1ForestWIP2.1.png" id="3_fe3uo"]
+[ext_resource type="Texture2D" uid="uid://byot4bj67q2qi" path="res://PlayerSprites/SwordInStone.png" id="3_vtp73"]
+[ext_resource type="Texture2D" uid="uid://dnaduxjyjgknt" path="res://PlayerSprites/Level1ForestWIP3.png" id="4_4gnop"]
+[ext_resource type="Script" path="res://SwordCollect.gd" id="4_r1qxo"]
+[ext_resource type="Texture2D" uid="uid://rpeith67cu2h" path="res://PlayerSprites/SwordHighlighted.png" id="5_01mru"]
+[ext_resource type="Texture2D" uid="uid://cpxisum1s0yum" path="res://PlayerSprites/Level1ForestWIP2.png" id="6_tkoom"]
+[ext_resource type="PackedScene" uid="uid://c703oemd7a4e" path="res://BasicEnemy.tscn" id="10_0lhs3"]
+[ext_resource type="Script" path="res://ProgressBar.gd" id="10_vkgvk"]
+[ext_resource type="Texture2D" uid="uid://joq50lxsrbeo" path="res://PlayerSprites/hBars.png" id="11_8qnyk"]
+[ext_resource type="Texture2D" uid="uid://5jkr7bvss0hx" path="res://PlayerSprites/HealthBarMainBorder.png" id="11_c30sf"]
+[ext_resource type="Texture2D" uid="uid://b5jhnvhni26en" path="res://PlayerSprites/EtherOrbPlaceholder.png" id="12_iyfe5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65qu2"]
+size = Vector2(976, 79.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqtf2"]
+size = Vector2(704, 79.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhjoc"]
+size = Vector2(548, 79.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1gah"]
+size = Vector2(80, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vjob2"]
+size = Vector2(48, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50qdw"]
+size = Vector2(175.813, 559.984)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddu1o"]
+size = Vector2(85, 27.25)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5d7ii"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1lt0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_01mru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_01mru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_01mru")
+}],
+"loop": true,
+"name": &"SwordHlight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vtp73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vtp73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vtp73")
+}],
+"loop": true,
+"name": &"SwordStone",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_ww5bf"]
+resource_name = "SwordStone"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"SwordStone"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_lm1dt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"SwordHlight"]
+}
+
+[sub_resource type="Animation" id="Animation_wl50m"]
+resource_name = "SwordHlight"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"SwordHlight"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nocnf"]
+_data = {
+"RESET": SubResource("Animation_lm1dt"),
+"SwordHlight": SubResource("Animation_wl50m"),
+"SwordStone": SubResource("Animation_ww5bf")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kx32"]
+atlas = ExtResource("11_8qnyk")
+region = Rect2(0, 18, 11, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebblx"]
+atlas = ExtResource("11_8qnyk")
+region = Rect2(0, 24, 46, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eseii"]
+atlas = ExtResource("11_8qnyk")
+region = Rect2(0, 18, 46, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqwrl"]
+atlas = ExtResource("11_8qnyk")
+region = Rect2(0, 12, 46, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjymf"]
+atlas = ExtResource("11_8qnyk")
+region = Rect2(0, 6, 46, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_norpp"]
+atlas = ExtResource("11_8qnyk")
+region = Rect2(0, 0, 46, 3)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o4r78"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kx32")
+}],
+"loop": true,
+"name": &"0hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebblx")
+}],
+"loop": true,
+"name": &"1hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eseii")
+}],
+"loop": true,
+"name": &"2hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqwrl")
+}],
+"loop": true,
+"name": &"3hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjymf")
+}],
+"loop": true,
+"name": &"4hp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_norpp")
+}],
+"loop": true,
+"name": &"5hp",
+"speed": 5.0
+}]
+
+[node name="Level 1" type="Node2D"]
+position = Vector2(0, -676)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, 676)
+format = 2
+
+[node name="Level1ForestWip" type="Sprite2D" parent="TileMap"]
+visible = false
+position = Vector2(496, -268)
+texture = ExtResource("1_32sk0")
+
+[node name="Level1ForestWip2" type="Sprite2D" parent="TileMap"]
+visible = false
+position = Vector2(992, -236)
+texture = ExtResource("6_tkoom")
+
+[node name="Level1ForestWip2_1" type="Sprite2D" parent="TileMap"]
+visible = false
+position = Vector2(1053, -223)
+texture = ExtResource("3_fe3uo")
+
+[node name="Level1ForestWip3" type="Sprite2D" parent="TileMap"]
+position = Vector2(1984, -236)
+texture = ExtResource("4_4gnop")
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Floor" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(488, 640.125)
+shape = SubResource("RectangleShape2D_65qu2")
+
+[node name="Floor2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1360, 640.125)
+shape = SubResource("RectangleShape2D_fqtf2")
+
+[node name="Floor5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2114, 640.125)
+shape = SubResource("RectangleShape2D_mhjoc")
+
+[node name="Floor3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1192, 544)
+shape = SubResource("RectangleShape2D_b1gah")
+
+[node name="Floor4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1304, 512)
+shape = SubResource("RectangleShape2D_b1gah")
+
+[node name="Floor8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1784, 600)
+shape = SubResource("RectangleShape2D_vjob2")
+
+[node name="Left Barrier" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-87.9063, 367.008)
+shape = SubResource("RectangleShape2D_50qdw")
+
+[node name="Right Barrier" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(4056, 470)
+shape = SubResource("RectangleShape2D_50qdw")
+
+[node name="Platform" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(42.5, 586.625)
+shape = SubResource("RectangleShape2D_ddu1o")
+one_way_collision = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(1813, 540)
+polygon = PackedVector2Array(11, 12, 11, 0, 11, -4, -5, -4, -5, -36, -53, -36, -53, -84, -101, -84, -101, -68, -85, -68, -85, -4, -53, -4, -53, 12)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(1670, 556)
+polygon = PackedVector2Array(42, 44, 42, 28, -6, 28, -6, -4, 26, -4, 26, -36, -54, -36, -54, -4, -102, -4, -102, 12, -70, 12, -70, 44)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(1910, 556)
+polygon = PackedVector2Array(42, 44, 42, -36, -54, -36, -54, -20, -38, -20, -38, 12, -54, 12, -54, 28, -70, 28, -70, 44)
+
+[node name="SwordInStone" type="Area2D" parent="."]
+position = Vector2(348, 584)
+scale = Vector2(1, 1)
+script = ExtResource("4_r1qxo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwordInStone"]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("CircleShape2D_5d7ii")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SwordInStone"]
+sprite_frames = SubResource("SpriteFrames_k1lt0")
+animation = &"SwordHlight"
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SwordInStone"]
+libraries = {
+"": SubResource("AnimationLibrary_nocnf")
+}
+autoplay = "SwordStone"
+
+[node name="Label" type="Label" parent="SwordInStone"]
+offset_left = -78.9999
+offset_top = 38.0
+offset_right = 79.0001
+offset_bottom = 61.0
+text = "Press \"E\" to interect."
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Player" parent="Player" instance=ExtResource("1_88frn")]
+position = Vector2(164, 588)
+
+[node name="Mobs" type="Node2D" parent="."]
+
+[node name="BasicEnemy" parent="Mobs" instance=ExtResource("10_0lhs3")]
+position = Vector2(700, 600)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="EtherOrbPlaceholder" type="Sprite2D" parent="UI"]
+position = Vector2(1076, 572)
+scale = Vector2(5, 5)
+texture = ExtResource("12_iyfe5")
+
+[node name="HealthBarMainBorder" type="Sprite2D" parent="UI"]
+position = Vector2(861, 576.5)
+scale = Vector2(5, 4.95)
+texture = ExtResource("11_c30sf")
+
+[node name="ProgressBar" type="ProgressBar" parent="UI"]
+offset_left = 751.0
+offset_top = 664.0
+offset_right = 994.0
+offset_bottom = 694.0
+max_value = 5.0
+script = ExtResource("10_vkgvk")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/ProgressBar"]
+position = Vector2(120, -90)
+scale = Vector2(5, 4.83332)
+sprite_frames = SubResource("SpriteFrames_o4r78")
+animation = &"0hp"
+autoplay = "5hp"
+
+[connection signal="body_entered" from="SwordInStone" to="SwordInStone" method="_on_body_entered"]
+[connection signal="body_exited" from="SwordInStone" to="SwordInStone" method="_on_body_exited"]
