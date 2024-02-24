@@ -1,38 +1,39 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708756494
-BasicEnemy.gd::GDScript::-1::1708751225::0::1::::<>CharacterBody2D<>::
-BasicEnemy.tscn::PackedScene::208006444511088782::1708755464::0::1::::<><>::uid://4veuq2eewgut::::res://PlayerSprites/BasicEnemy.png<>res://BasicEnemy.gd
-icon.svg::CompressedTexture2D::8587554082829910423::1708472603::1708472608::1::::<><>::
-main.gd::GDScript::-1::1708473821::0::1::::<>Node2D<>::
-main.tscn::PackedScene::3634387610635962312::1708755464::0::1::::<><>::res://main.gd
-ProgressBar.gd::GDScript::-1::1708754208::0::1::::<>ProgressBar<>::
-SwordCollect.gd::GDScript::-1::1708755131::0::1::::<>Area2D<>::
-world.tscn::PackedScene::3409850872623395794::1708755464::0::1::::<><>::uid://ccsr4nydlkelp::::res://PlayerSprites/Level1ForestWIP.png<>uid://bles2w3tdrjqp::::res://Player/Player.tscn<>uid://cwxxbu2n3v260::::res://PlayerSprites/Level1ForestWIP2.1.png<>uid://byot4bj67q2qi::::res://PlayerSprites/SwordInStone.png<>uid://dnaduxjyjgknt::::res://PlayerSprites/Level1ForestWIP3.png<>res://SwordCollect.gd<>uid://rpeith67cu2h::::res://PlayerSprites/SwordHighlighted.png<>uid://cpxisum1s0yum::::res://PlayerSprites/Level1ForestWIP2.png<>uid://c703oemd7a4e::::res://BasicEnemy.tscn<>res://ProgressBar.gd<>uid://joq50lxsrbeo::::res://PlayerSprites/hBars.png<>uid://5jkr7bvss0hx::::res://PlayerSprites/HealthBarMainBorder.png<>uid://b5jhnvhni26en::::res://PlayerSprites/EtherOrbPlaceholder.png
-::res://Player/::1708755464
-Player.gd::GDScript::-1::1708748633::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::3167897796669112939::1708755464::0::1::::<><>::res://Player/Player.gd<>uid://b5fgyyi50fmhn::::res://PlayerSprites/Idle/idleLeft 1.png<>uid://cwkvyngnheta7::::res://PlayerSprites/Idle/idleRight 1.png<>uid://85cslrt3okkr::::res://PlayerSprites/Idle/idleLeft 3.png<>uid://d24hffipmcl6r::::res://PlayerSprites/Idle/idleRight 2.png<>uid://bijjisqsnam7p::::res://PlayerSprites/Idle/idleLeftt 4.png<>uid://bcmwbg0nojqt6::::res://PlayerSprites/Idle/idleRight 3.png<>uid://di2b1wu4crgxb::::res://PlayerSprites/Idle/idleRight 4.png<>uid://ck542bog7v6us::::res://PlayerSprites/PlayerSpriteSheet1.png
-::res://PlayerSprites/::1708756494
-BasicEnemy.png::CompressedTexture2D::2079107864458639107::1708747725::1708747726::1::::<><>::
-EtherOrbPlaceholder.png::CompressedTexture2D::4511114741297171785::1708726422::1708726422::1::::<><>::
-hBars.png::CompressedTexture2D::661627258146879074::1708751784::1708751784::1::::<><>::
-HealthBar2.png::CompressedTexture2D::6598215321410342726::1708722457::1708723386::1::::<><>::
-HealthBarMainBorder.png::CompressedTexture2D::2124883920622500985::1708723544::1708723544::1::::<><>::
-Level1ForestWIP2.1.png::CompressedTexture2D::6365875985199480683::1708736068::1708736069::1::::<><>::
-Level1ForestWIP2.png::CompressedTexture2D::5873673660743524540::1708735623::1708735623::1::::<><>::
-Level1ForestWIP3.png::CompressedTexture2D::8071936108273139573::1708744368::1708744368::1::::<><>::
-Level1ForestWIP.png::CompressedTexture2D::4951462551165876597::1708665255::1708665258::1::::<><>::
-PlayerSpriteSheet1.png::CompressedTexture2D::5538470220080828062::1708477813::1708477813::1::::<><>::
-PlayerSpriteSheet2.png::CompressedTexture2D::2898062511076756811::1708756486::1708756494::1::::<><>::
-PlayerSpriteSheetBase1.png::CompressedTexture2D::5209249848161051742::1708477813::1708477813::1::::<><>::
-SwordHighlighted.png::CompressedTexture2D::1224434172688399389::1708727037::1708727037::1::::<><>::
-SwordInStone.png::CompressedTexture2D::4101059698327031348::1708727030::1708727008::1::::<><>::
-::res://PlayerSprites/Idle/::1708755710
-HealthBarMainBorder.png::CompressedTexture2D::6340571869314155796::1708723526::1708723521::1::::<><>::
-idleLeft 1.png::CompressedTexture2D::4502816316930208291::1708477813::1708477813::1::::<><>::
-idleLeft 2.png::CompressedTexture2D::6172517998825037278::1708477813::1708477813::1::::<><>::
-idleLeft 3.png::CompressedTexture2D::2378317355872462301::1708477813::1708477813::1::::<><>::
-idleLeftt 4.png::CompressedTexture2D::2967072542842433679::1708478593::1708478593::1::::<><>::
-idleRight 1.png::CompressedTexture2D::6338958313537898012::1708477813::1708477813::1::::<><>::
-idleRight 2.png::CompressedTexture2D::9114662007765646603::1708477813::1708477813::1::::<><>::
-idleRight 3.png::CompressedTexture2D::2552908818022603629::1708477813::1708477813::1::::<><>::
-idleRight 4.png::CompressedTexture2D::7776619334908237295::1708477813::1708477813::1::::<><>::
+::res://::1708787049
+BasicEnemy.gd::GDScript::-1::1708786918::0::1::::<>CharacterBody2D<>::
+BasicEnemy.tscn::PackedScene::208006444511088782::1708786918::0::1::::<><>::uid://4veuq2eewgut::::res://PlayerSprites/BasicEnemy.png<>res://BasicEnemy.gd
+export_presets.cfg::TextFile::-1::1708786918::0::1::::<><>::
+icon.svg::CompressedTexture2D::8587554082829910423::1708786918::1708787049::1::::<><>::
+main.gd::GDScript::-1::1708786918::0::1::::<>Node2D<>::
+main.tscn::PackedScene::3634387610635962312::1708786918::0::1::::<><>::res://main.gd
+ProgressBar.gd::GDScript::-1::1708786918::0::1::::<>ProgressBar<>::
+SwordCollect.gd::GDScript::-1::1708786918::0::1::::<>Area2D<>::
+world.tscn::PackedScene::3409850872623395794::1708786918::0::1::::<><>::uid://ccsr4nydlkelp::::res://PlayerSprites/Level1ForestWIP.png<>uid://bles2w3tdrjqp::::res://Player/Player.tscn<>uid://cwxxbu2n3v260::::res://PlayerSprites/Level1ForestWIP2.1.png<>uid://byot4bj67q2qi::::res://PlayerSprites/SwordInStone.png<>uid://dnaduxjyjgknt::::res://PlayerSprites/Level1ForestWIP3.png<>res://SwordCollect.gd<>uid://rpeith67cu2h::::res://PlayerSprites/SwordHighlighted.png<>uid://cpxisum1s0yum::::res://PlayerSprites/Level1ForestWIP2.png<>uid://c703oemd7a4e::::res://BasicEnemy.tscn<>res://ProgressBar.gd<>uid://joq50lxsrbeo::::res://PlayerSprites/hBars.png<>uid://5jkr7bvss0hx::::res://PlayerSprites/HealthBarMainBorder.png<>uid://b5jhnvhni26en::::res://PlayerSprites/EtherOrbPlaceholder.png
+::res://Player/::1708786918
+Player.gd::GDScript::-1::1708786918::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::3167897796669112939::1708786918::0::1::::<><>::res://Player/Player.gd<>uid://b5fgyyi50fmhn::::res://PlayerSprites/Idle/idleLeft 1.png<>uid://bhj3wwcf2yhxr::::res://PlayerSprites/PlayerSpriteSheet2.png<>uid://cwkvyngnheta7::::res://PlayerSprites/Idle/idleRight 1.png<>uid://85cslrt3okkr::::res://PlayerSprites/Idle/idleLeft 3.png<>uid://d24hffipmcl6r::::res://PlayerSprites/Idle/idleRight 2.png<>uid://bijjisqsnam7p::::res://PlayerSprites/Idle/idleLeftt 4.png<>uid://bcmwbg0nojqt6::::res://PlayerSprites/Idle/idleRight 3.png<>uid://di2b1wu4crgxb::::res://PlayerSprites/Idle/idleRight 4.png<>uid://ck542bog7v6us::::res://PlayerSprites/PlayerSpriteSheet1.png
+::res://PlayerSprites/::1708786918
+BasicEnemy.png::CompressedTexture2D::2079107864458639107::1708786918::1708786918::1::::<><>::
+EtherOrbPlaceholder.png::CompressedTexture2D::4511114741297171785::1708786918::1708786918::1::::<><>::
+hBars.png::CompressedTexture2D::661627258146879074::1708786918::1708786918::1::::<><>::
+HealthBar2.png::CompressedTexture2D::6598215321410342726::1708786918::1708786918::1::::<><>::
+HealthBarMainBorder.png::CompressedTexture2D::2124883920622500985::1708786918::1708786918::1::::<><>::
+Level1ForestWIP2.1.png::CompressedTexture2D::6365875985199480683::1708786918::1708786918::1::::<><>::
+Level1ForestWIP2.png::CompressedTexture2D::5873673660743524540::1708786918::1708786918::1::::<><>::
+Level1ForestWIP3.png::CompressedTexture2D::8071936108273139573::1708786918::1708786918::1::::<><>::
+Level1ForestWIP.png::CompressedTexture2D::4951462551165876597::1708786918::1708786918::1::::<><>::
+PlayerSpriteSheet1.png::CompressedTexture2D::5538470220080828062::1708786918::1708786918::1::::<><>::
+PlayerSpriteSheet2.png::CompressedTexture2D::2898062511076756811::1708786918::1708786918::1::::<><>::
+PlayerSpriteSheetBase1.png::CompressedTexture2D::5209249848161051742::1708786918::1708786918::1::::<><>::
+SwordHighlighted.png::CompressedTexture2D::1224434172688399389::1708786918::1708786918::1::::<><>::
+SwordInStone.png::CompressedTexture2D::4101059698327031348::1708786918::1708786918::1::::<><>::
+::res://PlayerSprites/Idle/::1708786918
+HealthBarMainBorder.png::CompressedTexture2D::6340571869314155796::1708786918::1708786918::1::::<><>::
+idleLeft 1.png::CompressedTexture2D::4502816316930208291::1708786918::1708786918::1::::<><>::
+idleLeft 2.png::CompressedTexture2D::6172517998825037278::1708786918::1708786918::1::::<><>::
+idleLeft 3.png::CompressedTexture2D::2378317355872462301::1708786918::1708786918::1::::<><>::
+idleLeftt 4.png::CompressedTexture2D::2967072542842433679::1708786918::1708786918::1::::<><>::
+idleRight 1.png::CompressedTexture2D::6338958313537898012::1708786918::1708786918::1::::<><>::
+idleRight 2.png::CompressedTexture2D::9114662007765646603::1708786918::1708786918::1::::<><>::
+idleRight 3.png::CompressedTexture2D::2552908818022603629::1708786918::1708786918::1::::<><>::
+idleRight 4.png::CompressedTexture2D::7776619334908237295::1708786918::1708786918::1::::<><>::
