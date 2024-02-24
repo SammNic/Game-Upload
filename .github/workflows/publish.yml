@@ -35,11 +35,11 @@ jobs:
           mv templates/* ~/.local/share/godot/export_templates/${GODOT_VERSION}.${RELEASE_NAME}
       - name: Web Build
         run: |
-          mkdir -v -p build/web
           rm ./godot
           mv ./Godot_v${GODOT_VERSION}-${RELEASE_NAME}_linux.x86_64 ./godot
           chmod +x ./godot
           cd "Game 1"
+          mkdir -v -p build/web
           ../godot --headless -v --export-release "HTML5" ./build/web/index.html
           cd ./build/web
           curl -fsSL https://github.com/gzuidhof/coi-serviceworker/raw/master/coi-serviceworker.js > coi-serviceworker.js
